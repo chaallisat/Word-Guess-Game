@@ -26,8 +26,11 @@ function random_word(bank)
 {
   
 return bank[Math.floor(Math.random()*bank.length)];
+
      
 }
+
+document.write(random_word(bank));
 
 
 console.log(random_word(bank));
