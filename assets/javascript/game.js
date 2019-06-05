@@ -27,7 +27,7 @@ count wins and loss
 
 const bank = ['apple', 'princess', 'charming'];
 let wrong = [];
-let guess = 10;
+let guess = 12;
 let win = 0;
 let loss = 0;
 
@@ -40,16 +40,16 @@ return bank[Math.floor(Math.random()*bank.length)];
 }
 
 
-
 for(let i = 0; i < random_word(bank).length; i++) {
     document.write("_ ");
-    if (onkeypress == random_word(bank[i])) {
+   // if (onkeypress == random_word(bank[i])) {
         
     }
-    else {
-        document.wrinte(onkeypress === wrong);
-    }
-}
+    //else {
+      //  document.write(onkeypress);
+   // }
+//}
+
 
 
 
