@@ -58,6 +58,7 @@ for(let i = 0; i < random_word(bank).length; i++) {
 
 
 
+
 /*textForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
