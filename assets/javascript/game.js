@@ -22,6 +22,7 @@ return bank[Math.floor(Math.random()*bank.length)];
 }
 }
 //display each character as '_'
+//For some reason, the word is not displaying
 
 for(let i = 0; i < idk.length; i++) {
    $("#word").text("_ ");
@@ -38,34 +39,43 @@ $(document).keypress(function(event){
         $(key).text($(ch).text());
     all.push(key);
     console.log(all);
-    
+//if right, reveal letters
+//if wrong, user lose a guess and show letter guessed
+    // --can't re-guess the same letters
+
     if (key == idk) {
     console.log(right);
 }
     else {
     wrong.push(key)
     guess--
+}    
+//if user guess all correct letters, display win and correct word
+if (solve = true) {
+    alert("You guessed it!")
+    win ++ 
 }
+    
+//if user runs out of guesses, display loss
+if (solve = false) {
+    alert("You ran out of guesses." + "Better luck next time!")
+    loss ++ 
+}
+    
+
+
+
+
 });
 
 
 
 
-//if right, reveal letters
-
-//if wrong, user lose a guess and show letter guessed
-    // --can't re-guess the same letters
-    //guess--
 
 
 
-    
-//if user guess all correct letters, display win and correct word
-    //alert("You guessed it!")
-    //win ++
-//if user runs out of guesses, display loss
-    //alert("You ran out of guesses." + "Better luck next time!")
-    //loss ++
+
+
 /*
 
 
