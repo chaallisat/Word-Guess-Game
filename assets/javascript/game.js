@@ -4,55 +4,71 @@ $(document).ready(function() {
     
 //start word bank (do not show word bank)
 const bank = ['apple', 'princess', 'charming'];
-let wrong = "";
+let all = []
+let wrong = [];
 let guess = 12;
 let win = 0;
 let loss = 0;
 
 //computer choose a word from word bank
-$("#word").text(function random_word(bank)
+const idk = {
+random_word: function random_word(bank)
 {
+    console.log(random_word(bank))
   
 return bank[Math.floor(Math.random()*bank.length)];
 
      
-})
+}
+}
+//display each character as '_'
+
+for(let i = 0; i < idk.length; i++) {
+   $("#word").text("_ ");
+   $("#word").getElementById("p1").innerHTML = "_ ";
+}
+
+//user press letter key
 
 $(document).keypress(function(event){ 
       
     let key = (event.keyCode ? event.keyCode : event.which); 
     let ch=String.fromCharCode(key) 
         console.log(ch);  
-        $("#word").text($(key).text());
-        
-      
-  
+        $(key).text($(ch).text());
+    all.push(key);
+    console.log(all);
+    
+    if (key == idk) {
+    console.log(right);
+}
+    else {
+    wrong.push(key)
+    guess--
+}
 });
 
-//display each character as '_'
 
-//for(let i = 0; i < random_word(bank).length; i++) {
-  // $("#word").text("_ ");
 
-//}
 
+//if right, reveal letters
+
+//if wrong, user lose a guess and show letter guessed
+    // --can't re-guess the same letters
+    //guess--
+
+
+
+    
+//if user guess all correct letters, display win and correct word
+    //alert("You guessed it!")
+    //win ++
+//if user runs out of guesses, display loss
+    //alert("You ran out of guesses." + "Better luck next time!")
+    //loss ++
 /*
-user press letter key
-    --onkeypress
-    --set in array
-    --display wrong key
-if right, reveal letters
-if wrong, user lose a guess and show letter guessed
-    guess--
-    --use counter-- to decrease guess 
-    --guess number starts at 12 counter = 12
-    --can't re-guess the same letters
-if user guess all correct letters, display win and correct word
-    --alert("You guessed it!")
-    --win ++
-if user runs out of guesses, display loss
-    --alert("You ran out of guesses." + "Better luck next time!")
-    --loss ++
+
+
 coputer choose another word - regardless of win/loss
 count wins and loss
 
