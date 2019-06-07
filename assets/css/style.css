@@ -1,9 +1,9 @@
-/*body{
-    background: darkblue;
-}*/
+body{
+    background: aliceblue;
+}
 .block{
     background: white;
-    border: darkblue solid 12px;
+    border: darkblue solid 5px;
     padding: 12px;
     margin: 12px;
 
