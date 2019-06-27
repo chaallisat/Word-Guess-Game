@@ -1,5 +1,7 @@
 //start game (run js code)
 
+//redo the whole code
+
 $(document).ready(function() {
     
 //start word bank (do not show word bank)
